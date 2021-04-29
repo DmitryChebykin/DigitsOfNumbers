@@ -4,7 +4,7 @@ public class MyNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите целое число, не более чем");
+        System.out.println("Введите положительное целое число, не более чем");
         System.out.println("2147483647 :");
         int examinedNumber = scanner.nextInt();
 
@@ -35,14 +35,14 @@ public class MyNumbers {
             }
 
             allDigitsSum += currentDigit;
-            allDigitsSumString = allDigitsSumString.insert(0, " + " + currentDigit);
+            allDigitsSumString.insert(0, " + " + currentDigit);
 
             if (currentDigit % 2 == 0) {
                 evenDigitsSum += currentDigit;
-                evenDigitsSumString = evenDigitsSumString.insert(0, " + " + currentDigit);
+                evenDigitsSumString.insert(0, " + " + currentDigit);
             } else {
                 oddDigitsSum += currentDigit;
-                oddDigitsSumString = oddDigitsSumString.insert(0, " + " + currentDigit);
+                oddDigitsSumString.insert(0, " + " + currentDigit);
             }
 
             i *= 10;
